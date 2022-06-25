@@ -1,4 +1,4 @@
-package com.planittesting.demo;
+package com.charlessnippet.demos;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

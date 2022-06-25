@@ -1,4 +1,4 @@
-package com.planittesting;
+package com.charlessnippet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -73,6 +73,7 @@ public class DemoTests
         // assertEquals(DiaNumberFormat.stripTrailingZeros("1.010"), "1.01");
         // assertEquals(Utility.splitYearField(null, "yearEnd"), null);
         // assertEquals(new BigDecimal("3600").stripTrailingZeros().toString(), "3600"); // this one will fail
+        logger.info(new BigDecimal("0.0").stripTrailingZeros().toString());
         assertEquals(new BigDecimal("0.0").stripTrailingZeros().toString(), "0");
         assertEquals(new BigDecimal("2.0").stripTrailingZeros().toString(), "2");
         assertEquals(new BigDecimal("2.50").stripTrailingZeros().toString(), "2.5");

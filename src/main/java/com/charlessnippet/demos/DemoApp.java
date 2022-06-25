@@ -1,5 +1,4 @@
-package com.planittesting.demo;
-
+package com.charlessnippet.demos;
 
 public class DemoApp
 {
