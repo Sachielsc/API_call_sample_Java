@@ -3,13 +3,15 @@ package com.charlessnippet;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.apache.logging.log4j.core.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,12 +37,11 @@ import org.xml.sax.SAXException;
 // @Disabled("Disable as these are demo test cases")
 public class DemoTests
 {
-    private Logger logger;
-    // private ConfigLog4j configLog4j;
+    private static final Logger logger = LogManager.getLogger(DemoTests.class);
 
     @BeforeAll
     public static void setUp() {
-        // Utility.setUpFilesAndFolders();
+        // TODO
     }
 
     @BeforeEach
@@ -54,7 +55,7 @@ public class DemoTests
 
     @AfterEach
     public void tearDown() {
-        // logger.info("Closing jTDS JDBC connection ...");
+        logger.info("Closing the test ...");
         // jtdsConnection.closeConnection();
         // logger.removeAllAppenders();
     }
@@ -63,9 +64,6 @@ public class DemoTests
     @Tag("demo")
     public void test_utility()
     {
-        // logger.info("Testing test case: test_utility");
-        // logger.info(Utility.splitYearField("20asdc", "yearStartQualifier"));
-        // logger.info(PreservationLookUp.returnCategoryValue("3"));
         // assertEquals(DiaNumberFormat.stripTrailingZeros("asd"), "asd");
         // assertEquals(DiaNumberFormat.stripTrailingZeros("0.0"), "0");
         // assertEquals(DiaNumberFormat.stripTrailingZeros("1"), "1");
@@ -73,7 +71,8 @@ public class DemoTests
         // assertEquals(DiaNumberFormat.stripTrailingZeros("1.010"), "1.01");
         // assertEquals(Utility.splitYearField(null, "yearEnd"), null);
         // assertEquals(new BigDecimal("3600").stripTrailingZeros().toString(), "3600"); // this one will fail
-        logger.info(new BigDecimal("0.0").stripTrailingZeros().toString());
+        
+        logger.info("Start testing demo test case ...");
         assertEquals(new BigDecimal("0.0").stripTrailingZeros().toString(), "0");
         assertEquals(new BigDecimal("2.0").stripTrailingZeros().toString(), "2");
         assertEquals(new BigDecimal("2.50").stripTrailingZeros().toString(), "2.5");
