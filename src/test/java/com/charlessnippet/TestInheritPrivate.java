@@ -9,7 +9,7 @@ import com.charlessnippet.demos.SuperClass;
 
 public class TestInheritPrivate
 {
-    Logger logger = LogManager.getLogger(DemoTests.class);
+    Logger logger = LogManager.getLogger(TestInheritPrivate.class);
 
     @Test
     public void testInheritPrivate() {
