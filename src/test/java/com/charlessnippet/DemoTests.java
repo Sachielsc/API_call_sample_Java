@@ -37,7 +37,7 @@ import org.xml.sax.SAXException;
 // @Disabled("Disable as these are demo test cases")
 public class DemoTests
 {
-    private static final Logger logger = LogManager.getLogger(DemoTests.class);
+    private Logger logger = LogManager.getLogger(DemoTests.class);
 
     @BeforeAll
     public static void setUp() {
@@ -47,17 +47,13 @@ public class DemoTests
     @BeforeEach
     public void configureTools() {
         // initialise log4j
-        // configLog4j = new ConfigLog4j();
-        // configLog4j.setupRootLogger("%-7p %d [%t] %c %x - %m%n");
-        // configLog4j.setupCustomLogger("%-7p %d [%t] %c %x - %m%n", "TestDemo", true, true, DemoTests.class);
-        // logger = configLog4j.getCustomLogger();
+        // logger = LogManager.getLogger(DemoTests.class);
     }
 
     @AfterEach
     public void tearDown() {
         logger.info("Closing the test ...");
-        // jtdsConnection.closeConnection();
-        // logger.removeAllAppenders();
+        logger.traceExit();
     }
     
     @Test
