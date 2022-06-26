@@ -15,5 +15,8 @@ src/test/resources/queries/run/
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 
-### VisualStudioCode ###
+# VisualStudioCode
 .vscode/*
+
+# Log files
+/logs/

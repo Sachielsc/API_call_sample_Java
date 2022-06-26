@@ -37,7 +37,7 @@ import org.xml.sax.SAXException;
 // @Disabled("Disable as these are demo test cases")
 public class DemoTests
 {
-    private Logger logger = LogManager.getLogger(DemoTests.class);
+    Logger logger = LogManager.getLogger(DemoTests.class);
 
     @BeforeAll
     public static void setUp() {

@@ -15,13 +15,11 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <Root level="info">
+        <Logger name="com.charlessnippet" level="info" additivity="false">
             <AppenderRef ref="LogToRollingFile"/>
             <AppenderRef ref="LogToConsole"/>
-        </Root>
-    </Loggers>
-    <Loggers>
-        <Root level="debug">
+        </Logger>
+        <Root level="error">
             <AppenderRef ref="LogToRollingFile"/>
             <AppenderRef ref="LogToConsole"/>
         </Root>
