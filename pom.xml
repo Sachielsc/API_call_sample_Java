@@ -13,7 +13,7 @@
   <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<log-level>info</log-level>
-		<parallel-test>true</parallel-test>
+		<parallel-test>false</parallel-test>
 		<parallel-strategy>dynamic</parallel-strategy>
 		<parallel-fixed-level>3</parallel-fixed-level>
 		<include-tags />
