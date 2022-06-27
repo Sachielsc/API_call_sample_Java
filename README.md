@@ -1,7 +1,13 @@
 # API call sample project
 
-## About this project
-TODO
+## About the job description
+Strong testing background delivering major pieces of work in an Agile environment
+Background testing within mobile / device testing teams especially Apple/iOS, Android or both
+3-5 years+ using commercial and/or open source test automation tools across the test automation pyramid.
+Practical experience with iOS and especially the following programming languages and framework, i.e. Swift, xcode and XCUIT.
+Practical experience with Android and especially the following programming languages and framework, i.e. Java, and Appium.
+Knowledge of following programming languages and database query tools, i.e. Java, JavaScript, C#, SQL, HTML, XML etc.
+Javascript is a nice to have
 
 ## Dev environment setup, dev tool installation and solution to blockers
 ### Try `Maven package/install` without test (skip tests) but running into an error in Powershell
