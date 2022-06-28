@@ -40,22 +40,22 @@ public class TestHttpRequest
 
     @BeforeEach
     public void configureTools() {
-        // initialise log4j
-        // logger = LogManager.getLogger(DemoTests.class);
+        logger.info("Start testing " + this.getClass().getSimpleName());
     }
 
     @AfterEach
     public void tearDown() {
-        logger.info("Closing the test ...");
+        logger.info("Closing the test " + this.getClass().getSimpleName());
         logger.traceExit();
     }
     
+    /**
+     * don't use this in your main thread
+     * this is not asynchronous
+     */
     @Test
-    @Tag("demo")
-    public void test_utility()
-    {        
-        logger.info("Start testing http request ...");
-
+    public void test_http_request()
+    {
         BufferedReader bufferedReader;
         String line;
         StringBuffer responseContent = new StringBuffer();
@@ -76,8 +76,9 @@ public class TestHttpRequest
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            httpURLConnection.disconnect();
         }
-
     }
 
 }

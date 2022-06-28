@@ -46,13 +46,12 @@ public class DemoTests
 
     @BeforeEach
     public void configureTools() {
-        // initialise log4j
-        // logger = LogManager.getLogger(DemoTests.class);
+        logger.info("Start testing " + this.getClass().getSimpleName());
     }
 
     @AfterEach
     public void tearDown() {
-        logger.info("Closing the test ...");
+        logger.info("Closing the test " + this.getClass().getSimpleName());
         logger.traceExit();
     }
     

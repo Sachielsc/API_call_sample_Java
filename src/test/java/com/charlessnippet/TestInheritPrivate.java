@@ -15,7 +15,7 @@ public class TestInheritPrivate
 
     @AfterEach
     public void tearDown() {
-        logger.info("Closing the test ...");
+        logger.info("Closing the test " + this.getClass().getSimpleName());
         logger.traceExit();
     }
 
